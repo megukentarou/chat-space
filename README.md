@@ -1,5 +1,3 @@
-<<<<<<< Updated upstream
-=======
 # ChatSpace DB設計
 
 ## usersテーブル
