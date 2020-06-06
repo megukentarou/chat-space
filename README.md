@@ -40,4 +40,3 @@ _ has_many :messages
 ### Association
 - belongs_to :user
 - belongs_to :group
->>>>>>> Stashed changes
