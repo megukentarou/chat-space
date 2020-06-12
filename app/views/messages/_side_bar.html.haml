@@ -2,10 +2,13 @@
   .side-header
     .side-header__user--info
       .info__user--name
-        test
-      .info__user--icon
-        %i.fa.fa-edit
-        %i.fa.fa-cog
+        = current_user.name
+      %ul.info__user--icon
+        %li.list
+          = icon('fas', 'edit', class: 'fa.fa-edit')
+        %li.list__cog
+          = link_to edit_user_path(current_user) do
+            = icon('fas', 'cog', class: 'fa.fa-cog')
   .side-bar__group--list
     .group
       .group__name

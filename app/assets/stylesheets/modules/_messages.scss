@@ -18,18 +18,20 @@
       margin: 0 auto;
       display: flex;
       justify-content: space-between;
-      text-align: right;
       .info__user--name {
         line-height: 100%;
-        width: 30px;
         font-size: 16px;
+        text-align: left;
       }
       .info__user--icon {
+        text-align: right;
+        display: flex;
         line-height: 100%;
-        width: 60px;
         color: #fff;
-        .fa-cog::before{
-          margin-left: 5px;
+        .list {
+          &__cog{
+            margin-left: 5px;
+          }
         }
       }
     }
