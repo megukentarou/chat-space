@@ -27,12 +27,11 @@
         text-align: right;
         display: flex;
         line-height: 100%;
-        color: #fff;
-        a:visited {
+        a {
           color: #fff;
         }
         .list__cog{
-          margin-left: 5px;
+            margin-left: 5px;
         }
       }
     }
