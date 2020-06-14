@@ -4,19 +4,18 @@
       .info__user--name
         = current_user.name
       %ul.info__user--icon
-        %li.list
-          = icon('fas', 'edit', class: 'fa.fa-edit')
-        %li.list__cog
-          = link_to edit_user_path(current_user) do
-            = icon('fas', 'cog', class: 'fa.fa-cog')
+        = link_to new_group_path do
+          %li.list
+            = link_to new_group_path(current_user) do
+              = icon('fas', 'edit', class: 'fa.fa-edit')
+          %li.list__cog
+            = link_to edit_user_path(current_user) do
+              = icon('fas', 'cog', class: 'fa.fa-cog')
   .side-bar__group--list
-    .group
-      .group__name
-        目黒家
-      .group__message
-        工事中
-.side-chat
-  .side-chat__header
-
-.side-chat
-  .headrer 
+    - current_user.groups.each do |group|
+      .group
+        = link_to '#' do
+          .group__name
+            = group.name
+          .group__message
+            メッセージはまだありません
