@@ -3,43 +3,22 @@
     .group--bar__info
       .left-box
         .group-name
-          目黒家
+          = @group.name
         .group-member__list
-          Member : 父・母・長女
+          Member
+          - @group.users.each do |user|
+            = user.name            
       .edit-btn
-        = link_to "#", class: "btn" do
+        = link_to edit_group_path(@group), class: "btn" do
           Edit
   .main-chat__message--list
     .message
-      .messenger
-        父
-      .created-at
-        2020/06/09  
-    .message-content
-      今日はhamlの実装中
+      = render @messages
 
-    .message
-      .messenger
-        母
-      .created-at
-        2020/06/09  
-    .message-content
-      今日は餃子を焼きます
-    
-    .message
-      .messenger
-        長女
-      .created-at
-        2020/06/09  
-    .message-content
-      今日は保育園に行ったよ
-  .main-chat__mesage--form
-    .form-wrapper
-      .form-container
-        %input.text-form{type: "text", placeholder: "type a message"}
-        %label{class:"image-form"}
-          = icon("fas", "image")
-          %input{type: "file", class: "input-image"}
-        .send-btn
-          = link_to "#", class: "btn" do
-            Send
+  .main-chat__message--form
+    = form_for [@group, @message] do |f|
+      = f.text_field :content, class: 'text-form', placeholder: 'type a message'
+      = f.label :image, class: 'image-form' do
+        = icon('fas', 'image', class: 'icon')
+        = f.file_field :image, class: 'input-image'
+      = f.submit 'Send', class: 'send-btn'
