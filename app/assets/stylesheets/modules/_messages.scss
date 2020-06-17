@@ -103,7 +103,6 @@
     background-color: #fafafa;
     padding: 46px 40px;
     .message {
-      display: flex;
       margin-bottom: 12px;
       .messenger {
         color: #333;
@@ -122,48 +121,43 @@
       padding-bottom: 40px;
     }
   }
-  .main-chat__mesage--form {
+  .main-chat__message--form {
     height: 90px;
     background-color: #d2d2d2;
     padding: 20px 40px;
-    .form-wrapper {
+    .new_message {
+      position: relative;
+      width: 100%;
       display: flex;
-      .form-container {
-        position: relative;
+      .text-form  {
+        height: 50px;
         width: 100%;
-        display: flex;
-        .text-form  {
-          height: 50px;
-          width: 100%;
-          padding: 0 40px 0 10px;
-          color: #434a54;
-          border-style: none;
-        }
-        .image-form {
-          position: absolute;
-          top: 10px;
-          right: 130px;
-          cursor: pointer;
-          display: block;
-          font-size: $iconSize;
-          .input-image {
-            display: none;
-          }
-        }
+        padding: 0 40px 0 10px;
+        color: #434a54;
+        border-style: none;
       }
-      .send-btn {
-        width: 100px;
-        line-height: 50px;
-        background-color: #38aef0;
-        text-align: center;
+      .image-form {
+        position: absolute;
+        top: 10px;
+        right: 130px;
         cursor: pointer;
-        margin-left: 15px;
-        padding: 0 30px;
-        .btn {
-          text-decoration: none;
-          color: #fff;
+        display: block;
+        font-size: $iconSize;
+        .input-image {
+          display: none;
         }
       }
+    }
+    .send-btn {
+      width: 100px;
+      line-height: 50px;
+      background-color: #38aef0;
+      cursor: pointer;
+      margin-left: 15px;
+      padding: 0 30px;
+      text-decoration: none;
+      color: #fff;
+      border: none;
     }
   }
 }
