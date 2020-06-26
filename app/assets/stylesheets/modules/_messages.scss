@@ -102,8 +102,9 @@
     height: calc(100vh - 190px);
     background-color: #fafafa;
     padding: 46px 40px;
-    .message {
-      margin-bottom: 12px;
+    overflow: scroll;
+    .messages {
+      margin-bottom: 20px;
       .messenger {
         color: #333;
         font-size: 16px;
