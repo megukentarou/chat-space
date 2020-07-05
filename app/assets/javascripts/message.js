@@ -60,7 +60,7 @@ $(function(){
       $('form')[0].reset();
       $('.send-btn').prop('disabled', false);
     })
-    .fail(function() {
+    .fail(function(){ 
       alert("メッセージ送信に失敗しました");
       $('.send-btn').prop('disabled', false);
     })
